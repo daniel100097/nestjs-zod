@@ -1,5 +1,6 @@
 export interface UnknownSchema {
     parse(input: unknown): unknown;
+    parseAsync?: (input: unknown) => Promise<unknown>;
     array?: () => UnknownSchema;
 }
 
